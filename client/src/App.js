@@ -17,9 +17,10 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            FIB CALCULATOR
+             Learn React
           </a>
-          <Link to="/">HomeRAK </Link>
+          <label>RAKESHS FIB APP</label>
+          <Link to="/">Home </Link>
           <Link to="/otherpage">Other Page</Link>
         </header>
         <div>
