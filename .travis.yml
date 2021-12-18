@@ -1,0 +1,26 @@
+sudo :required
+services:
+  - docker
+
+before_install:
+  - docker build -t rakeshz12/react-test -f ./client/Dockerfile.dev ./client
+
+script:
+  - docker run  -e CI=true rakeshz12/react-test  npm test -- --coverage
+
+after_success:
+  - docker build -t rakeshz12/multi-client ./client
+  - docker build -t rakeshz12/multi-nginx  ./nginx
+  - docker build -t rakeshz12/multi-server ./server
+  - docker build -t rakeshz12/multi-worker ./worker
+  #login to docker CLI 
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin 
+  #take images and push through docker hub 
+  - docker push rakeshz12/multi-client
+  - docker push rakeshz12/multi-nginx
+  - docker push rakeshz12/multi-server
+  - docker push rakeshz12/multi-worker
+
+  
+
+
