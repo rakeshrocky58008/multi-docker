@@ -13,6 +13,10 @@
   }
 }
 
+.App-title {
+  font-size: 1.5em;
+}
+
 .App-header {
   background-color: #c7ec0d;
   min-height: 100vh;
@@ -24,7 +28,7 @@
   color: rgb(207, 13, 13);
 }
 
-.App.section {
+.App-section {
   background-color: #430b8b;
   font-size: medium;
   color: #c7ec0d;
