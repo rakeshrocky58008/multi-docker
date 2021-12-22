@@ -10,13 +10,18 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <h1 className="App-header">RAKESH'S FIB APP</h1>
-          <Link to="/">Home </Link>
+          <img src={logo} className="App-logo" alt="logo" />
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Fib Calcuator
+          </a>
+          <Link to="/">Home</Link>
           <Link to="/otherpage">Other Page</Link>
         </header>
-        <section>
-          <label className="App-section">Welcome to FIB application </label>
-          </section>
         <div>
           <Route exact path="/" component={Fib} />
           <Route path="/otherpage" component={OtherPage} />
