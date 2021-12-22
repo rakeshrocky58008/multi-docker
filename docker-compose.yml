@@ -1,11 +1,11 @@
 version: "3"
 services:
   client:
-    image: "rakeshz12/multi"
+    image: "rakeshz12/multi-client"
     mem_limit: 128m
     hostname: client
   server:
-    image: "rakeshz12/multi"
+    image: "rakeshz12/multi-server"
     mem_limit: 128m
     hostname: api
     environment:
